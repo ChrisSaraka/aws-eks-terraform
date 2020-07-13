@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage("Docker build") {
 			steps{
-				sh "docker build -t csarakasidis/devops-machine-learning-repo:v1 ."
+				sh "docker build . -t csarakasidis/devops-machine-learning-repo:v1"
 
 			}
 		}
