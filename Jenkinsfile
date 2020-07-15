@@ -18,8 +18,8 @@ pipeline {
 		stage("SSH to k8s client") {
 			steps {
 				sshagent(['bootstrap-server']) {
-    				sh "scp -o StrictHostKeyChecking=no flask-keras-app.yml ec2-user@3.10.3.245:/home/ec2-user/"
-    				sh "ssh ec2-user@3.10.3.245 kubectl apply -f flask-keras-app.yml"
+    				sh "scp -o StrictHostKeyChecking=no flask-keras-app.yml ec2-user@3.10.112.100:/home/ec2-user/"
+    				sh "ssh ec2-user@3.10.112.100 kubectl apply -f flask-keras-app.yml"
 				}
 			}
 		}
